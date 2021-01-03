@@ -1,26 +1,17 @@
-# luigi
+# luigi  
 
-A barebones single-header GUI library for Win32 and X11. 
+A barebones single-header GUI library for SDL2 in [Odin](https://odin-lang.org/) . 
+
+## Prerequisites
+This fork includes `.ttf` font rendering via stb-truetype. You will need a file called `font.ttf` next to the `.exe`.
+You will also need sdl2 to dynamically link to the `.exe` 
 
 ## Building example
+Requires [odin](https://odin-lang.org/) + [odin-stb](https://github.com/vassvik/odin-stb) + [odin-sdl2](https://github.com/JoshuaManton/odin-sdl2) in the `odin/shared` folder. 
+`odin run main.odin` or `odin run main.odin -llvm-api -out=example.exe`
 
-### Windows
 
-Update `luigi_example.c` to `#define UI_WINDOWS` at the top of the file, and then run the following command in a Visual Studio command prompt:
-
-```
-cl /O2 luigi_example.c user32.lib gdi32.lib
-```
-
-### Linux
-
-Update `luigi_example.c` to `#define UI_LINUX` at the top of the file, and then run the following command in Bash:
-
-```
-gcc -O2 luigi_example.c -lX11 -o luigi
-```
-
-## Documentation
+## Documentation (C Version)
 
 ### Introduction
 
